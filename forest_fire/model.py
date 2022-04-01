@@ -8,7 +8,7 @@ from decimal import Decimal
 from mesa.batchrunner import BatchRunner
 from datetime import datetime
 
-from .agent import TreeCell
+from agent import TreeCell
 
 
 class ForestFire(Model):
@@ -150,4 +150,6 @@ def batch_run():
                         "steps"+str(100)+"lower_firemans"+now
                         )
     run_model_data.to_csv("model_data"+file_name_suffix+".csv")
-    #run_agent_data.to_csv("agent_data"+file_name_suffix+".csv")
+
+
+batch_run()
